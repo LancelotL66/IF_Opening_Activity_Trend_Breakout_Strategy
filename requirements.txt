@@ -1,0 +1,3 @@
+dqtrader
+numpy
+pandas
