@@ -158,7 +158,6 @@ def _calculate_open_state(context, data, today):
 
 def _close_position(context, today, side, reason, price):
     order_target_percent(
-        account_index=0,
         target_index=0,
         target_percent=0,
         side=side,
@@ -215,7 +214,6 @@ def on_bar(context):
 
     if price > context.open_high:
         order_target_percent(
-            account_index=0,
             target_index=0,
             target_percent=context.today_position_pct,
             side=PositionSide.LONG,
@@ -228,7 +226,6 @@ def on_bar(context):
 
     elif price < context.open_low:
         order_target_percent(
-            account_index=0,
             target_index=0,
             target_percent=context.today_position_pct,
             side=PositionSide.SHORT,
